@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Counter = (props) => {
   const [count, setCount] = useState(0);
@@ -12,6 +12,14 @@ const Counter = (props) => {
   function countdown() {
     setCount((prevState) => prevState - 1);
   }
+
+  // CounterのJSXがレンダリング終了時に実行されるもの
+  useEffect(() => console.log(count));
+  
+  // CounterのJSXが初回レンダリング時に実行されるもの
+  // deps(依存)に何も依存しない->初回だけ
+  // depsが変更時のみ実行
+  useEffect(() => console.log(count), []);
 
   return (
     <div>

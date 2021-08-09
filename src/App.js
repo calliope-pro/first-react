@@ -1,13 +1,13 @@
-import { Content, Title, PublishButton, TextInput, Counter } from './components/index.jsx';
-import { useState } from 'react';
+import { Content, Title, PublishButton, TextInput, Counter, FetchButton } from './components/index.jsx';
+import { useEffect, useState } from 'react';
 
 const Article = (props) => {
   const [isPublished, setIsPublished] = useState(false);
-  console.log(isPublished);
-  console.log(useState(false));
+
   function publishArticle() {
     setIsPublished(!isPublished);
   }
+
   if (isPublished) {
     return (
       <div>
@@ -27,11 +27,13 @@ const Article = (props) => {
 };
 
 function App() {
+  const userId = 'google';
   return (
     <>
       <TextInput></TextInput>
       <Article title={'First'} content={'Hello React!'}></Article>
       <Counter></Counter>
+      <FetchButton userName={userId}></FetchButton>
       {/* <Artic title={'First'} content={'Hello React!'}/> でもよい */}
     </>
   );
