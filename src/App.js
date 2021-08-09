@@ -1,5 +1,5 @@
 import { Content, Title, PublishButton, TextInput, Counter, FetchButton } from './components/index.jsx';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const Article = (props) => {
   const [isPublished, setIsPublished] = useState(false);
