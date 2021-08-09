@@ -8,7 +8,7 @@ const PublishButton = (props) => {
     return () => {
       // レンダリング直後にuseEffect内で初めに呼ばれる
       let h4 = document.createElement("small");
-      h4.innerText = "WOWOWOWOWOWWOOW";
+      h4.innerText = "WOWOWOWOWOWWOOW\n";
       document.body.appendChild(h4);
       console.log("hello h4");
     };
