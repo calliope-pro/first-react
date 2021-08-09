@@ -8,10 +8,6 @@ const TextInput = (props) => {
     setName(event.target.value);
     // 入力する度にconsoleに新たに反映される
   }
-  
-  useEffect(() => {
-
-  }, [name.length])
   if (name.length < 8) {
     return (
       <>
