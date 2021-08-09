@@ -19,7 +19,7 @@ const Counter = (props) => {
   // CounterのJSXが初回レンダリング時に実行されるもの
   // deps(依存)に何も依存しない->初回だけ
   // depsが変更時のみ実行
-  useEffect(() => console.log(count), []);
+  // useEffect(() => console.log(count), []);
 
   return (
     <div>
